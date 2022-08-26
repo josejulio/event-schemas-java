@@ -67,7 +67,7 @@ async function main() {
   for (const path of ['apps', 'core']) {
     fs.rmSync(`${repoRoot}/${path}`, {recursive: true, force: true});
   }
-  console.info('Generating go source files');
+  console.info('Generating source files');
   const apps = await fsPromises.readdir(`${repoRoot}/api/schemas/apps/`);
   await generateFiles(repoRoot, 'core');
   for (const app of apps) {
