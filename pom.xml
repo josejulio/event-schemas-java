@@ -32,4 +32,27 @@
       <artifactId>jackson-datatype-jsr310</artifactId>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.2.0</version>
+      </plugin>
+    </plugins>
+    <resources>
+      <!-- Default resource path -->
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+      </resource>
+
+      <!-- Schemas path -->
+      <resource>
+        <directory>${basedir}/api</directory>
+        <includes>
+          <include>schemas/**</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
 </project>
