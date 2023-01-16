@@ -52,10 +52,6 @@
       <id>jboss.staging</id>
       <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2</url>
     </repository>
-    <repository>
-      <id>jboss.releases</id>
-      <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
-    </repository>
   </distributionManagement>
   <build>
     <plugins>
