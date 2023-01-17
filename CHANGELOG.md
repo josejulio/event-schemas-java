@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/josejulio/event-schemas-java/compare/v1.0.2...v1.1.0) (2023-01-17)
+
+
+### Features
+
+* Adding foobar to .gitignore ([e3ae5c9](https://github.com/josejulio/event-schemas-java/commit/e3ae5c99574de35c23bf21f8228103d9015f19a5))
+
 ## [1.0.2](https://github.com/josejulio/event-schemas-java/compare/v1.0.1...v1.0.2) (2023-01-16)
 
 
