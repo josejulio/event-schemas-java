@@ -26,7 +26,7 @@ jobs:
         with:
           java-version: 11
           distribution: adopt
-          server-id: jboss.releases
+          server-id: jboss.staging
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
       - name: Publish package
