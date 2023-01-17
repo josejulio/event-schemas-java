@@ -11,6 +11,21 @@
     <maven.compiler.source>${java.release}</maven.compiler.source>
   </properties>
 
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:ssh://git@github.com/RedHatInsights/event-schemas-java.git</connection>
+    <url>https://github.com/RedHatInsights/event-schemas-java.git</url>
+    <developerConnection>scm:git:ssh://git@github.com/RedHatInsights/event-schemas-java.git</developerConnection>
+    <tag>insights-schemas-java-parent-0.10</tag>
+  </scm>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -32,12 +47,23 @@
       <artifactId>jackson-datatype-jsr310</artifactId>
     </dependency>
   </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>jboss.releases</id>
+      <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+    </repository>
+  </distributionManagement>
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>3.3.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M7</version>
       </plugin>
     </plugins>
     <resources>
