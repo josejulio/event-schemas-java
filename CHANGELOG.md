@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/josejulio/event-schemas-java/compare/v1.2.0...v1.3.0) (2023-01-17)
+
+
+### Features
+
+* more stuff ([42a3e95](https://github.com/josejulio/event-schemas-java/commit/42a3e9599a30a41d73a6b3c692bdef44bf1157a3))
+
 ## [1.2.0](https://github.com/josejulio/event-schemas-java/compare/v1.1.0...v1.2.0) (2023-01-17)
 
 
