@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/josejulio/event-schemas-java/compare/v1.1.0...v1.2.0) (2023-01-17)
+
+
+### Features
+
+* skip snapshot PR ([dae8858](https://github.com/josejulio/event-schemas-java/commit/dae88586eda67840790c1dcd1c0e905ec2f4418c))
+* test ([b75c2b5](https://github.com/josejulio/event-schemas-java/commit/b75c2b5174ce54d632944783dc2363fe5729d058))
+
+
+### Bug Fixes
+
+* Adding more changes ([38a8213](https://github.com/josejulio/event-schemas-java/commit/38a8213fbe350029f6adb25d0dff15fde041428f))
+* Next release ([f1fb888](https://github.com/josejulio/event-schemas-java/commit/f1fb88841bd22ab28b43e922d3815ba25373a37e))
+
 ## [1.1.0](https://github.com/josejulio/event-schemas-java/compare/v1.0.2...v1.1.0) (2023-01-17)
 
 
