@@ -7,3 +7,4 @@ target/
 .continue
 .release
 .foobar
+.next-release
