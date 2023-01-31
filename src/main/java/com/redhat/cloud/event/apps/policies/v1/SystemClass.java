@@ -1,4 +1,4 @@
-package com.redhat.cloud.event.apps.advisor.v1;
+package com.redhat.cloud.event.apps.policies.v1;
 
 import com.fasterxml.jackson.annotation.*;
 import java.time.OffsetDateTime;
@@ -6,14 +6,14 @@ import java.time.OffsetDateTime;
 /**
  * A RHEL system managed by console.redhat.com
  */
-public class RHELSystem {
+public class SystemClass {
     private OffsetDateTime checkIn;
     private String displayName;
+    private RHELSystemTag[] tags;
     private String hostURL;
     private String hostname;
     private String inventoryID;
     private String rhelVersion;
-    private RHELSystemTag[] tags;
 
     /**
      * Timestamp of when the system did a check in. Must adhere to RFC 3339.
@@ -27,6 +27,11 @@ public class RHELSystem {
     public String getDisplayName() { return displayName; }
     @JsonProperty("display_name")
     public void setDisplayName(String value) { this.displayName = value; }
+
+    @JsonProperty("tags")
+    public RHELSystemTag[] getTags() { return tags; }
+    @JsonProperty("tags")
+    public void setTags(RHELSystemTag[] value) { this.tags = value; }
 
     @JsonProperty("host_url")
     public String getHostURL() { return hostURL; }
@@ -47,9 +52,4 @@ public class RHELSystem {
     public String getRHELVersion() { return rhelVersion; }
     @JsonProperty("rhel_version")
     public void setRHELVersion(String value) { this.rhelVersion = value; }
-
-    @JsonProperty("tags")
-    public RHELSystemTag[] getTags() { return tags; }
-    @JsonProperty("tags")
-    public void setTags(RHELSystemTag[] value) { this.tags = value; }
 }

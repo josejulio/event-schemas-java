@@ -1,17 +1,27 @@
 package com.redhat.cloud.event.core.v1;
 
 import com.fasterxml.jackson.annotation.*;
+import java.time.OffsetDateTime;
 
 /**
  * A RHEL system managed by console.redhat.com
  */
 public class SystemClass {
+    private OffsetDateTime checkIn;
     private String displayName;
     private String hostURL;
     private String hostname;
     private String inventoryID;
     private String rhelVersion;
     private RHELSystemTag[] tags;
+
+    /**
+     * Timestamp of when the system did a check in. Must adhere to RFC 3339.
+     */
+    @JsonProperty("check_in")
+    public OffsetDateTime getCheckIn() { return checkIn; }
+    @JsonProperty("check_in")
+    public void setCheckIn(OffsetDateTime value) { this.checkIn = value; }
 
     @JsonProperty("display_name")
     public String getDisplayName() { return displayName; }
