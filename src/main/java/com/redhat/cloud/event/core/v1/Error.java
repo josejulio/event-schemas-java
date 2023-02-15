@@ -9,7 +9,9 @@ public class Error {
     private ErrorClass error;
 
     @JsonProperty("error")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public ErrorClass getError() { return error; }
     @JsonProperty("error")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public void setError(ErrorClass value) { this.error = value; }
 }
