@@ -11,7 +11,9 @@ public class Notification {
     private Recipients notificationRecipients;
 
     @JsonProperty("notification_recipients")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public Recipients getNotificationRecipients() { return notificationRecipients; }
     @JsonProperty("notification_recipients")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public void setNotificationRecipients(Recipients value) { this.notificationRecipients = value; }
 }

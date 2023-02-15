@@ -16,8 +16,10 @@ public class Recipients {
      * Setting to false honors the user preferences.
      */
     @JsonProperty("ignore_user_preferences")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public Boolean getIgnoreUserPreferences() { return ignoreUserPreferences; }
     @JsonProperty("ignore_user_preferences")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public void setIgnoreUserPreferences(Boolean value) { this.ignoreUserPreferences = value; }
 
     /**
@@ -25,8 +27,10 @@ public class Recipients {
      * sends an email to all users of the account.
      */
     @JsonProperty("only_admins")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public Boolean getOnlyAdmins() { return onlyAdmins; }
     @JsonProperty("only_admins")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public void setOnlyAdmins(Boolean value) { this.onlyAdmins = value; }
 
     /**
@@ -34,7 +38,9 @@ public class Recipients {
      * administrators settings. Users list will be merged with other settings.
      */
     @JsonProperty("users")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String[] getUsers() { return users; }
     @JsonProperty("users")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public void setUsers(String[] value) { this.users = value; }
 }
