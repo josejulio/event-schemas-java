@@ -2,13 +2,14 @@ const {
   quicktypeMultiFile,
   InputData,
   JSONSchemaInput,
-  JSONSchemaStore,
+  JSONSchemaStore, JavaTargetLanguage,
 } = require("quicktype-core");
 const { execSync } = require("child_process");
 const fsPromises = require("fs/promises");
 const fs = require("fs");
 const path = require("path");
 const { chdir } = require("process");
+const {CloudEventJavaLanguage} = require("./CloudEventJavaLanguage");
 const BASE_JAVA_PACKAGE = 'com.redhat.cloud.event';
 const BASE_JAVA_SRC_PATH = "src/main/java";
 
@@ -48,9 +49,10 @@ async function generateJavaFiles(subdir, version, inputData, _schema) {
   const subPackage = `${subdir.replaceAll('/', '.')}.${version}`;
   const packageName = `${BASE_JAVA_PACKAGE}.${subPackage}`;
   const outputPath = `${BASE_JAVA_SRC_PATH}/${packageName.replaceAll('.', '/')}`;
+  const lang = new CloudEventJavaLanguage();
   const result = await quicktypeMultiFile({
     inputData,
-    lang: "java",
+    lang,
     rendererOptions: {
       package: packageName,
     },
