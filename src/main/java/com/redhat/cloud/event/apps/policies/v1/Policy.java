@@ -1,11 +1,12 @@
 package com.redhat.cloud.event.apps.policies.v1;
 
 import com.fasterxml.jackson.annotation.*;
+import java.util.UUID;
 
 public class Policy {
     private String condition;
     private String description;
-    private String id;
+    private UUID id;
     private String name;
     private String url;
 
@@ -25,10 +26,10 @@ public class Policy {
 
     @JsonProperty("id")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String getID() { return id; }
+    public UUID getID() { return id; }
     @JsonProperty("id")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public void setID(String value) { this.id = value; }
+    public void setID(UUID value) { this.id = value; }
 
     @JsonProperty("name")
     @JsonInclude(JsonInclude.Include.NON_NULL)
